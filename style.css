@@ -1,3 +1,9 @@
+```css
+/* General Page Styling */
+* {
+  box-sizing: border-box;
+}
+
 body {
   max-width: 1000px;
   margin: auto;
@@ -10,6 +16,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Header */
 header {
   background-color: #0b1f3a;
   color: white;
@@ -18,41 +25,70 @@ header {
   text-align: center;
 }
 
+header h1 {
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px #087ea4;
+}
+
+/* Navigation Bar */
 nav {
   background-color: #087ea4;
-  padding: 15px;
+  padding: 12px;
   text-align: center;
   margin-top: 10px;
   border-radius: 8px;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
-nav a {
-  color: white;
-  display: block;
-  width: 30%;
-  text-decoration: none;
-  margin: 5px auto;
-  font-size: 1.7em;
-  padding: 8px 12px;
-  transition: background-color 0.3s, color 0.3s;
-  border-radius: 6px;
-}
-
-nav a:hover {
-  background-color: white;
-  color: #087ea4;
+/* Navigation List */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
+  display: inline-block;
   list-style: none;
+  margin: 5px;
 }
 
-nav li a {
-  border: 2px #AAA solid;
-  padding: 6px;
+/* Navigation Links */
+nav a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 3px;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px 16px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              transform 0.3s ease;
 }
 
+/* Rollover Effect */
+nav a:hover,
+nav a:focus {
+  background-color: white;
+  color: #087ea4;
+  border-color: #0b1f3a;
+  transform: translateY(-3px);
+}
+
+/* Selected Page Feature */
+nav a.active {
+  background-color: #0b1f3a;
+  color: #5ee7f5;
+  border-color: white;
+  box-shadow: inset 0 -3px 0 #5ee7f5;
+}
+
+/* Main Content */
 main {
   background-color: white;
   padding: 25px;
@@ -67,12 +103,46 @@ h2 {
 
 p {
   line-height: 1.6;
+  text-align: justify;
 }
 
+/* First Letter of the First Paragraph on Each Page */
+main > p:first-of-type::first-letter {
+  color: #087ea4;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Blockquote Styling */
+blockquote {
+  background-color: #eef6ff;
+  border-left: 5px solid #087ea4;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-style: italic;
+  line-height: 1.8;
+  color: #1f2937;
+}
+
+/* General Image Styling */
 img {
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
+/* Styled Horizontal Rule */
+hr {
+  width: 70%;
+  height: 4px;
+  background-color: #087ea4;
+  border: none;
+  border-radius: 5px;
+  margin: 25px auto;
+}
+
+/* Footer */
 footer {
   background-color: #0b1f3a;
   color: white;
@@ -99,7 +169,7 @@ footer a {
   display: block;
   width: 50%;
   max-width: 500px;
-  height: 120px;
+  height: 180px;
   object-fit: cover;
   margin: 20px auto;
 }
@@ -111,7 +181,7 @@ footer a {
   border-radius: 50%;
 }
 
-/* Class Selectors */
+/* General Class Selectors */
 .blue-text {
   color: #087ea4;
 }
@@ -124,6 +194,7 @@ footer a {
   color: #d62828;
   text-align: center;
   font-weight: bold;
+  font-size: 1.2em;
 }
 
 .top-link {
@@ -134,11 +205,30 @@ footer a {
   font-size: 12px;
 }
 
-hr {
-  width: 60%;
-  height: 5px;
-  background-color: #039;
-  border: none;
+/* Attractive Byline */
+.byline {
+  width: 80%;
+  margin: 20px auto;
+  padding: 12px;
+  background-color: #eef6ff;
+  color: #0b1f3a;
+  border-left: 5px solid #087ea4;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.95em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Box Border for Special Newsletter Content */
+.box {
+  border: 3px solid #087ea4;
+  border-left: 7px solid #087ea4;
+  padding: 20px;
+  margin: 25px 0;
+  background-color: #e0f4fc;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(11, 31, 58, 0.12);
 }
 
 /* ID Selectors */
@@ -149,6 +239,7 @@ hr {
 #Learn {
   margin-top: 25px;
   padding: 10px;
+  scroll-margin-top: 20px;
 }
 
 /* Transcript Sections */
@@ -198,15 +289,276 @@ hr {
   margin-bottom: 10px;
 }
 
-/* Responsive Navigation */
-@media only screen and (min-width: 640px) {
-  nav a {
-    display: inline;
-    width: auto;
+/* Newsletter Page Styling */
+.newsletter-title {
+  color: #0b1f3a;
+  text-align: center;
+  font-size: 2.2em;
+  line-height: 1.2;
+  margin: 10px 0;
+  padding-bottom: 15px;
+}
+
+/* Decorative Accent Under Newsletter Title */
+.newsletter-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 5px;
+  background-color: #087ea4;
+  border-radius: 10px;
+  margin: 12px auto 0;
+}
+
+.newsletter-subtitle {
+  color: #087ea4;
+  text-align: center;
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.issue-info {
+  text-align: center;
+  color: #0b1f3a;
+  margin: 20px 0;
+}
+
+/* Newsletter Infobar / Special Section Banner */
+.newsletter-infobar {
+  background-color: #0b1f3a;
+  color: white;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border-bottom: 5px solid #5ee7f5;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(11, 31, 58, 0.15);
+}
+
+/* Infobar Heading */
+.newsletter-infobar h2 {
+  color: #5ee7f5;
+  text-align: center;
+  margin: 0;
+  font-size: 1.3em;
+}
+
+/* Newsletter Article Cards */
+.newsletter-section {
+  display: flow-root;
+  margin: 25px 0;
+  padding: 20px;
+  border: 1px solid #d5eaf5;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+/* Decorative Circle Before Article Headings */
+.newsletter-section h2 {
+  color: #087ea4;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.newsletter-section h2::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #087ea4;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.newsletter-section p {
+  line-height: 1.8;
+  font-size: 1.05em;
+}
+
+/* Newsletter Images */
+.newsletter-image {
+  display: block;
+  width: 40%;
+  max-width: 350px;
+  height: auto;
+  float: right;
+  margin: 0 0 15px 20px;
+  border-radius: 12px;
+  border: 2px solid #d5eaf5;
+  box-shadow: 0 3px 8px rgba(11, 31, 58, 0.12);
+}
+
+/* Newsletter Tip */
+.newsletter-tip {
+  background-color: #e0f4fc;
+  border-left: 6px solid #087ea4;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 8px;
+}
+
+.newsletter-tip h2 {
+  color: #0b1f3a;
+  text-align: left;
+  margin-top: 0;
+}
+
+.newsletter-tip p {
+  line-height: 1.7;
+}
+
+/* Newsletter Closing Message */
+.newsletter-closing {
+  background-color: #eef6ff;
+  color: #0b1f3a;
+  text-align: center;
+  padding: 25px;
+  border: 2px solid #087ea4;
+  border-radius: 18px;
+  line-height: 1.8;
+  font-size: 1.1em;
+  margin-top: 30px;
+}
+
+/* Decorative Circles Beside Closing Message */
+.newsletter-closing::before,
+.newsletter-closing::after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-color: #087ea4;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+/* CSS3 Feature 2: Multiple Text Columns */
+.newsletter-columns {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 2px solid #087ea4;
+}
+
+/* Tablet and Mobile Layout */
+@media screen and (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  header {
+    padding: 18px;
+  }
+
+  header h1 {
+    font-size: 1.7em;
+  }
+
+  .main-banner {
+    height: 130px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .main-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Mobile Navigation */
+  nav {
+    padding: 10px;
   }
 
   nav li {
-    display: inline;
-    padding: 0 18px;
+    display: block;
+    margin: 6px auto;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    font-size: 1.1em;
+    margin: 5px auto;
+  }
+
+  .newsletter-title {
+    font-size: 1.7em;
+  }
+
+  .newsletter-subtitle {
+    font-size: 1.05em;
+  }
+
+  .newsletter-image {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 15px auto;
+  }
+
+  .newsletter-section {
+    padding: 14px;
+    margin: 20px 0;
+  }
+
+  .newsletter-section h2 {
+    font-size: 1.3em;
+  }
+
+  .newsletter-section p {
+    font-size: 1em;
+    line-height: 1.7;
+  }
+
+  .course-list,
+  .references {
+    padding: 15px 25px;
+  }
+
+  .newsletter-tip {
+    padding: 15px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  .byline {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .newsletter-infobar {
+    padding: 12px 15px;
+    font-size: 1.05em;
+  }
+
+  .newsletter-infobar h2 {
+    font-size: 1.2em;
+  }
+
+  .newsletter-closing {
+    padding: 18px;
+  }
+
+  blockquote {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  /* Keep Newsletter Columns Readable on Mobile */
+  .newsletter-columns {
+    column-count: 1;
   }
 }
+```
