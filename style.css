@@ -1,8 +1,6 @@
-```css
-/* General Page Styling */
-* {
-  box-sizing: border-box;
-}
+/* =========================================================
+   1. TAG SELECTORS — body, headings, paragraphs, then other tags
+   ========================================================= */
 
 body {
   max-width: 1000px;
@@ -16,7 +14,24 @@ body {
   font-family: Arial, sans-serif;
 }
 
+header h1 {
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px #087ea4;
+}
+
+p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* General Page Styling */
+
+* {
+  box-sizing: border-box;
+}
+
 /* Header */
+
 header {
   background-color: #0b1f3a;
   color: white;
@@ -25,12 +40,8 @@ header {
   text-align: center;
 }
 
-header h1 {
-  margin-top: 10px;
-  text-shadow: 2px 2px 4px #087ea4;
-}
-
 /* Navigation Bar */
+
 nav {
   background-color: #087ea4;
   padding: 12px;
@@ -43,6 +54,7 @@ nav {
 }
 
 /* Navigation List */
+
 nav ul {
   list-style: none;
   margin: 0;
@@ -56,6 +68,7 @@ nav li {
 }
 
 /* Navigation Links */
+
 nav a {
   color: white;
   display: inline-block;
@@ -72,6 +85,7 @@ nav a {
 }
 
 /* Rollover Effect */
+
 nav a:hover,
 nav a:focus {
   background-color: white;
@@ -80,15 +94,8 @@ nav a:focus {
   transform: translateY(-3px);
 }
 
-/* Selected Page Feature */
-nav a.active {
-  background-color: #0b1f3a;
-  color: #5ee7f5;
-  border-color: white;
-  box-shadow: inset 0 -3px 0 #5ee7f5;
-}
-
 /* Main Content */
+
 main {
   background-color: white;
   padding: 25px;
@@ -101,12 +108,8 @@ h2 {
   text-align: center;
 }
 
-p {
-  line-height: 1.6;
-  text-align: justify;
-}
-
 /* First Letter of the First Paragraph on Each Page */
+
 main > p:first-of-type::first-letter {
   color: #087ea4;
   font-size: 1.5em;
@@ -114,6 +117,7 @@ main > p:first-of-type::first-letter {
 }
 
 /* Blockquote Styling */
+
 blockquote {
   background-color: #eef6ff;
   border-left: 5px solid #087ea4;
@@ -126,6 +130,7 @@ blockquote {
 }
 
 /* General Image Styling */
+
 img {
   max-width: 100%;
   height: auto;
@@ -133,6 +138,7 @@ img {
 }
 
 /* Styled Horizontal Rule */
+
 hr {
   width: 70%;
   height: 4px;
@@ -143,6 +149,7 @@ hr {
 }
 
 /* Footer */
+
 footer {
   background-color: #0b1f3a;
   color: white;
@@ -156,7 +163,39 @@ footer a {
   color: #5ee7f5;
 }
 
+
+/* =========================================================
+   2. ID SELECTORS
+   ========================================================= */
+
+/* ID Selectors */
+
+#top {
+  padding-top: 10px;
+}
+
+#Learn {
+  margin-top: 25px;
+  padding: 10px;
+  scroll-margin-top: 20px;
+}
+
+
+/* =========================================================
+   3. CLASS SELECTORS
+   ========================================================= */
+
+/* Selected Page Feature */
+
+nav a.active {
+  background-color: #0b1f3a;
+  color: #5ee7f5;
+  border-color: white;
+  box-shadow: inset 0 -3px 0 #5ee7f5;
+}
+
 /* Image Classes */
+
 .main-banner {
   display: block;
   width: 100%;
@@ -182,6 +221,7 @@ footer a {
 }
 
 /* General Class Selectors */
+
 .blue-text {
   color: #087ea4;
 }
@@ -206,6 +246,7 @@ footer a {
 }
 
 /* Attractive Byline */
+
 .byline {
   width: 80%;
   margin: 20px auto;
@@ -221,6 +262,7 @@ footer a {
 }
 
 /* Box Border for Special Newsletter Content */
+
 .box {
   border: 3px solid #087ea4;
   border-left: 7px solid #087ea4;
@@ -231,18 +273,8 @@ footer a {
   box-shadow: 0 3px 8px rgba(11, 31, 58, 0.12);
 }
 
-/* ID Selectors */
-#top {
-  padding-top: 10px;
-}
-
-#Learn {
-  margin-top: 25px;
-  padding: 10px;
-  scroll-margin-top: 20px;
-}
-
 /* Transcript Sections */
+
 .transcript-title {
   text-align: center;
   color: #0b1f3a;
@@ -290,6 +322,7 @@ footer a {
 }
 
 /* Newsletter Page Styling */
+
 .newsletter-title {
   color: #0b1f3a;
   text-align: center;
@@ -300,6 +333,7 @@ footer a {
 }
 
 /* Decorative Accent Under Newsletter Title */
+
 .newsletter-title::after {
   content: "";
   display: block;
@@ -325,6 +359,7 @@ footer a {
 }
 
 /* Newsletter Infobar / Special Section Banner */
+
 .newsletter-infobar {
   background-color: #0b1f3a;
   color: white;
@@ -339,6 +374,7 @@ footer a {
 }
 
 /* Infobar Heading */
+
 .newsletter-infobar h2 {
   color: #5ee7f5;
   text-align: center;
@@ -347,6 +383,7 @@ footer a {
 }
 
 /* Newsletter Article Cards */
+
 .newsletter-section {
   display: flow-root;
   margin: 25px 0;
@@ -357,6 +394,7 @@ footer a {
 }
 
 /* Decorative Circle Before Article Headings */
+
 .newsletter-section h2 {
   color: #087ea4;
   text-align: left;
@@ -379,6 +417,7 @@ footer a {
 }
 
 /* Newsletter Images */
+
 .newsletter-image {
   display: block;
   width: 40%;
@@ -392,6 +431,7 @@ footer a {
 }
 
 /* Newsletter Tip */
+
 .newsletter-tip {
   background-color: #e0f4fc;
   border-left: 6px solid #087ea4;
@@ -411,6 +451,7 @@ footer a {
 }
 
 /* Newsletter Closing Message */
+
 .newsletter-closing {
   background-color: #eef6ff;
   color: #0b1f3a;
@@ -424,6 +465,7 @@ footer a {
 }
 
 /* Decorative Circles Beside Closing Message */
+
 .newsletter-closing::before,
 .newsletter-closing::after {
   content: "";
@@ -436,13 +478,162 @@ footer a {
 }
 
 /* CSS3 Feature 2: Multiple Text Columns */
+
 .newsletter-columns {
   column-count: 2;
   column-gap: 30px;
   column-rule: 2px solid #087ea4;
 }
 
+/* Contact Page Styling */
+
+.contact-title {
+  color: #0b1f3a;
+  text-align: center;
+  font-size: 2.2em;
+}
+
+/* Contact Form Table */
+
+.contact-form {
+  width: 100%;
+  margin: 25px auto;
+}
+
+.contact-table {
+  width: 100%;
+  border: 2px solid #0b1f3a;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(11, 31, 58, 0.15);
+}
+
+.contact-table th {
+  background-color: #0b1f3a;
+  color: white;
+  padding: 18px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.contact-table td {
+  border: 1px solid #c5dce8;
+  padding: 12px;
+}
+
+/* Right-Aligned Field Labels */
+
+.contact-table .field-label {
+  width: 32%;
+  text-align: right;
+  font-weight: bold;
+  color: #0b1f3a;
+  background-color: #eef6ff;
+}
+
+/* Required Field Asterisks */
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+.required-note {
+  text-align: center;
+  font-size: 0.95em;
+  color: #1f2937;
+}
+
+/* Form Input Fields */
+
+.contact-table input,
+.contact-table select,
+.contact-table textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #9bb9c9;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+.contact-table input:focus,
+.contact-table select:focus,
+.contact-table textarea:focus {
+  outline: 2px solid #087ea4;
+  border-color: #087ea4;
+}
+
+.contact-table textarea {
+  resize: vertical;
+}
+
+/* Submit and Reset Buttons */
+
+.contact-table .form-buttons {
+  text-align: center;
+  background-color: #eef6ff;
+  padding: 18px;
+}
+
+.form-buttons button {
+  background-color: #087ea4;
+  color: white;
+  padding: 12px 20px;
+  margin: 5px;
+  border: 2px solid #087ea4;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              transform 0.3s ease;
+}
+
+.form-buttons button:hover,
+.form-buttons button:focus {
+  background-color: #0b1f3a;
+  color: #5ee7f5;
+  border-color: #0b1f3a;
+  transform: translateY(-2px);
+}
+
+/* Contact Information */
+
+.contact-info {
+  text-align: center;
+  line-height: 1.8;
+  padding: 15px;
+  background-color: #eef6ff;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.contact-info a {
+  color: #087ea4;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+  color: #0b1f3a;
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   4. RESPONSIVE MEDIA QUERIES — keep at the end
+   ========================================================= */
+
 /* Tablet and Mobile Layout */
+
 @media screen and (max-width: 640px) {
   body {
     background-attachment: scroll;
@@ -560,5 +751,40 @@ footer a {
   .newsletter-columns {
     column-count: 1;
   }
+
+  /* Contact Page on Mobile */
+  .contact-title {
+    font-size: 1.7em;
+  }
+
+  .contact-info {
+    padding: 12px;
+  }
+
+  .contact-table .field-label {
+    width: 35%;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .contact-table td {
+    padding: 8px;
+  }
+
+  .contact-table input,
+  .contact-table select,
+  .contact-table textarea {
+    padding: 8px;
+    font-size: 0.95em;
+  }
+
+  .contact-table th {
+    padding: 14px 8px;
+    font-size: 1.05em;
+  }
+
+  .form-buttons button {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
-```
