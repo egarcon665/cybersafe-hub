@@ -1,40 +1,204 @@
 ```html
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
   <title>Contact - CyberSafe Hub</title>
 
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="author" content="Emmanuel Garcon">
-  <meta name="description" content="Contact information for CyberSafe Hub.">
+  <meta name="description" content="Contact information and contact form for CyberSafe Hub.">
 
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
+  <!-- Website header -->
   <header>
     <h1>CyberSafe Hub</h1>
     <p>Learn. Protect. Stay Secure.</p>
   </header>
 
+  <!-- Main navigation menu -->
   <nav>
     <ul>
       <li><a href="index.htm">Home</a></li>
       <li><a href="resume.htm">Resume</a></li>
       <li><a href="newsletter.htm">Newsletter</a></li>
-      <li><a href="contact.htm">Contact</a></li>
+      <li><a href="contact.htm" class="active">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- Main contact content -->
   <main>
 
-    <h1 class="contact-title">Contact Me</h1>
+    <h2 class="contact-title">Contact Me</h2>
+
+    <p>
+      Thank you for visiting CyberSafe Hub! Complete the form below
+      if you have questions about cybersecurity, online safety,
+      passwords, phishing, or malware.
+    </p>
+
+    <p class="required-note">
+      Fields marked with a red <span class="required">*</span> are required.
+    </p>
+
+    <!-- Contact Form Table -->
+    <form action="#" method="post" class="contact-form">
+
+      <table class="contact-table" border="1">
+
+        <!-- Table Header -->
+        <tr>
+          <th colspan="2">CyberSafe Hub Contact Form</th>
+        </tr>
+
+        <!-- Row 2: First Name -->
+        <tr>
+          <td class="field-label">
+            <label for="first-name">First Name <span class="required">*</span></label>
+          </td>
+          <td>
+            <input type="text" id="first-name" name="first-name"
+                   placeholder="Enter your first name" required>
+          </td>
+        </tr>
+
+        <!-- Row 3: Last Name -->
+        <tr>
+          <td class="field-label">
+            <label for="last-name">Last Name <span class="required">*</span></label>
+          </td>
+          <td>
+            <input type="text" id="last-name" name="last-name"
+                   placeholder="Enter your last name" required>
+          </td>
+        </tr>
+
+        <!-- Row 4: City -->
+        <tr>
+          <td class="field-label">
+            <label for="city">City <span class="required">*</span></label>
+          </td>
+          <td>
+            <input type="text" id="city" name="city"
+                   placeholder="Enter your city" required>
+          </td>
+        </tr>
+
+        <!-- Row 5: State -->
+        <tr>
+          <td class="field-label">
+            <label for="state">ST <span class="required">*</span></label>
+          </td>
+          <td>
+            <input type="text" id="state" name="state"
+                   placeholder="Enter your state" maxlength="2"
+                   required>
+          </td>
+        </tr>
+
+        <!-- Row 6: ZIP Code -->
+        <tr>
+          <td class="field-label">
+            <label for="zip">ZIP Code <span class="required">*</span></label>
+          </td>
+          <td>
+            <input type="text" id="zip" name="zip"
+                   placeholder="Enter your ZIP code"
+                   inputmode="numeric" maxlength="10" required>
+          </td>
+        </tr>
+
+        <!-- Row 7: Email -->
+        <tr>
+          <td class="field-label">
+            <label for="email">Email <span class="required">*</span></label>
+          </td>
+          <td>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email address" required>
+          </td>
+        </tr>
+
+        <!-- Row 8: Phone -->
+        <tr>
+          <td class="field-label">
+            <label for="phone">Phone</label>
+          </td>
+          <td>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your phone number">
+          </td>
+        </tr>
+
+        <!-- Row 9: Subject -->
+        <tr>
+          <td class="field-label">
+            <label for="subject">Subject <span class="required">*</span></label>
+          </td>
+          <td>
+            <select id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="passwords">Password Security</option>
+              <option value="phishing">Phishing</option>
+              <option value="malware">Malware</option>
+              <option value="network-security">Network Security</option>
+              <option value="other">Other</option>
+            </select>
+          </td>
+        </tr>
+
+        <!-- Row 10: Message -->
+        <tr>
+          <td class="field-label">
+            <label for="message">Message <span class="required">*</span></label>
+          </td>
+          <td>
+            <textarea id="message" name="message" rows="5"
+                      placeholder="Type your message here"
+                      required></textarea>
+          </td>
+        </tr>
+
+        <!-- Row 11: Submit and Reset Buttons -->
+        <tr>
+          <td colspan="2" class="form-buttons">
+            <button type="submit">Submit Message</button>
+            <button type="reset">Clear Form</button>
+          </td>
+        </tr>
+
+      </table>
+
+    </form>
+
+    <!-- Direct Contact Information -->
+    <h2>Other Ways to Contact Me</h2>
 
     <p class="contact-info">
+      Email:
+      <a href="mailto:cybersafehub@gmail.com">
+        cybersafehub@gmail.com
+      </a>
+      <br>
+      Phone:
+      <a href="tel:15551234567">
+        (555) 123-4567
+      </a>
+    </p>
+
+  </main>
+
+  <!-- Website footer -->
+  <footer>
+    <p>&copy; 2026 CyberSafe Hub</p>
+
+    <p>
       Contact Me:
       <a href="mailto:cybersafehub@gmail.com">
         cybersafehub@gmail.com
@@ -45,34 +209,9 @@
       </a>
     </p>
 
-    <h2>CyberSafe Hub</h2>
-
-    <p>
-      Thank you for visiting CyberSafe Hub. If you have questions about
-      cybersecurity, online safety, passwords, phishing, or malware,
-      please feel free to contact me using the information above.
-    </p>
-
-  </main>
-
-  <footer>
-
-    <p>&copy; 2026 CyberSafe Hub</p>
-
-    <p>
-      Contact Me:
-      <a href="mailto:cybersafehub@gmail.com">
-        cybersafehub@gmail.com
-      </a> |
-      <a href="tel:15551234567">
-        (555) 123-4567
-      </a>
-    </p>
-
     <p>
       <b>Disclaimer:</b> This is a fictional website and contact page.
     </p>
-
   </footer>
 
 </body>
